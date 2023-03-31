@@ -69,3 +69,12 @@ Una excepción ocurre en una situación distinta, en la cual no suele haber solu
 - Mejora el rendimiento: La caché permite que la CPU acceda a los datos e instrucciones con mucha mayor rapidez, que si tuviera que acceder directamente a la RAM. La caché reduce este número de accesos de memoria, aumentando así la velocidad de aquella información que realmente necesita acceder a la RAM.
 
 - Ahorro de energía: Como la caché permite que la CPU tenga un acceso más rápido a los datos, reduce la cantidad de tiempo para que la CPU termine una tarea. Por ello la CPU realiza menos procesos que ayuda con el ahorro de energía.
+
+
+## **9. Explique con un ejemplo, como se manifiesta el problema de mantener la coherencia de los datos de cache en los siguientes entornos:**
+
+- *Sistema distribuido:* En un sistema distribuido, varios nodos pueden tener su propia caché local. Para mantener la coherencia entre la actualización de los datos de un nodo y otro, se deben utilizar protocolos que garanticen la actualización de la caché en todos los nodos. Se destacan los protocolos como el MESI (Modified, Exclusive, Shared, Invalid) o el protocolo MSI. 
+
+- *Sistema multiprocesador:* En este tipo de sistema, varios procesadores pueden compartir la misma memoria principal y tener su propia caché. Para mantener la coherencia en caso de que un procesador tenga una caché distinta o actualizada del otro, dado a un proceso distinto se deben utilizar protcolos como los citados anteriormente
+
+- *Sistema de un solo procesador:* Se puede producir un problema de coherencia de caché en un solo procesador, en el caso que existan varias capas de caché. Si una copia de un dato se encuentra en una caché de nivel superior y otra copia se encuentra en una caché de nivel inferior, pueden producirse inconsistencias si la caché de no se actualiza correctamente. Los protocolos de coherencia resuelven este problema.
