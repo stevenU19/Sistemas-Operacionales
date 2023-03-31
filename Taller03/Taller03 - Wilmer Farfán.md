@@ -1,5 +1,5 @@
-# TALLER
-## WILMER STEVEN FARFÁN CASTILLO - 2194285
+# TALLER03
+### WILMER STEVEN FARFÁN CASTILLO - 2194285
 
 ## **1. En entornos compartidos, los usuarios comparten el sistema. Esto puede dar lugar a varios problemas de seguridad. Mencione dos problemas y explíquelos. Es posible asegurar el mismo grado de seguridad en un sistema compartido que en un sistema dedicado. Explique su respuesta.**
 
