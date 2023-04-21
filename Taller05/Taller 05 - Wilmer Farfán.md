@@ -28,13 +28,13 @@ Los cambios a mediano plazo son aquellos que tienen una duración de unos meses 
 
 El cambio de contexto es un proceso en el que el kernel del OS cambia la ejecución de un proceso por otro. Esto puede ocurrir, en la finalización de un proceso, la espera de un recurso, la ejecución de una interrupción de hardware, entre otras razones más. Las acciones que toma el kernel son:
 
-- **Copiar el contexto actual:** El kernel debe guardar el contexto del proceso actual antes de hacer cualquier cambio. El contexto del proceso incluye información como el valor de los registros del procesador, el estado de la memoria y los recursos utilizados por el proceso.
+- *Copiar el contexto actual:* El kernel debe guardar el contexto del proceso actual antes de hacer cualquier cambio. El contexto del proceso incluye información como el valor de los registros del procesador, el estado de la memoria y los recursos utilizados por el proceso.
 
-- **Seleccionar el proceso siguiente:** El proceso siguiente puede ser el que está esperando para utilizar los recursos que el proceso actual está utilizando, el proceso con la mayor prioridad, o un proceso elegido al azar.
+- *Seleccionar el proceso siguiente:* El proceso siguiente puede ser el que está esperando para utilizar los recursos que el proceso actual está utilizando, el proceso con la mayor prioridad, o un proceso elegido al azar.
 
-- **Restaurar el contexto del proceso siguiente:** Una vez que se ha seleccionado el proceso siguiente, el kernel debe restaurar el contexto del proceso seleccionado. Esto implica cargar los valores de los registros del procesador, el estado de la memoria y los recursos que el proceso necesita para continuar su ejecución.
+- *Restaurar el contexto del proceso siguiente:* Una vez que se ha seleccionado el proceso siguiente, el kernel debe restaurar el contexto del proceso seleccionado. Esto implica cargar los valores de los registros del procesador, el estado de la memoria y los recursos que el proceso necesita para continuar su ejecución.
 
-- **Cambiar el proceso en ejecución:** Después de que se ha restaurado el contexto del proceso siguiente, el kernel puede cambiar la ejecución del procesador al proceso siguiente. En este momento, el proceso siguiente comienza a ejecutarse.
+- *Cambiar el proceso en ejecución:* Después de que se ha restaurado el contexto del proceso siguiente, el kernel puede cambiar la ejecución del procesador al proceso siguiente. En este momento, el proceso siguiente comienza a ejecutarse.
 
 
 ## 4. Defina las ventajas y desventajas desde el punto de vista del programador para comunicación síncrona y asíncrona:
@@ -80,23 +80,23 @@ Como desventaja se tiene la vulnerabilidad. Es mucho menos seguro para el OS que
 
 Un proceso es un programa en ejecución en el sistema operativo, que puede estar en diferentes estados dependiendo de su estado actual de ejecución:
 
-- **1. Nuevo:** En este paso, el proceso se acaba de crear y no ha sido asignado a la CPU para su ejecución.
-- **2. Preparado:** El proceso ha sido cargado en memoria y está listo para ser ejecutado. Sin embargo, todavía no se le ha asignado tiempo de CPU.
-- **3. Ejecución:** En este paso, el proceso está actualmente siendo ejecutado por la CPU ya sea usando recursos de la CPU o esperando su asignación.
-- **4. Bloqueado:** El proceso se encuentra en espera de algún recurso, como una entrada o salida de un dispositivo. Este no puede continuar su ejecución hasta que este recurso esté disponible.
-- **5. Terminado:** El proceso ya ha finalizado su ejecución. Además, se han liberado la memoria y los recursos asignados.
+- *1. Nuevo:* En este paso, el proceso se acaba de crear y no ha sido asignado a la CPU para su ejecución.
+- *2. Preparado:* El proceso ha sido cargado en memoria y está listo para ser ejecutado. Sin embargo, todavía no se le ha asignado tiempo de CPU.
+- *3. Ejecución:* En este paso, el proceso está actualmente siendo ejecutado por la CPU ya sea usando recursos de la CPU o esperando su asignación.
+- *4. Bloqueado:* El proceso se encuentra en espera de algún recurso, como una entrada o salida de un dispositivo. Este no puede continuar su ejecución hasta que este recurso esté disponible.
+- *5. Terminado:* El proceso ya ha finalizado su ejecución. Además, se han liberado la memoria y los recursos asignados.
 
 
 ## 8. ¿Qué datos se encuentran en un PCB?:
 
 Un PCB (Process Control Block) es un registro especial donde el sistema operativo agrupa toda la información que necesita conocer respecto a un proceso particular. Proporciona una forma eficiente de administrar y controlar los procesos en ejecución. Los datos que se encuentran en un PCB pueden variar dependiendo del sistema operativo específico, pero algunos de los elementos más comunes que se incluyen son:
 
-- Identificador de Proceso, que es un número único que identifica el proceso en el sistema operativo.
-- Estado del Proceso, que se encarga de indicar si el proceso está en ejecución, suspendido, bloqueado o finalizado.
-- Contador de Programa, encargado en mantener la dirección en memoria, de la próxima instrucción que debe ejecutar el proceso.
-- Información de Memoria, la cual contiene información sobre la memoria que utiliza el proceso, incluyendo su tamaño, dirección y permisos de acceso.
-- Información de Recursos, incluye información sobre los recursos que el proceso está utilizando, como archivos abiertos, dispositivos de entrada/salida, entre otros.
-- Información de Planificación, la cual contiene información sobre la prioridad del proceso, su estado de espera y otros detalles relevantes para la planificación del sistema.
+- *Identificador de Proceso*, que es un número único que identifica el proceso en el sistema operativo.
+- *Estado del Proceso*, que se encarga de indicar si el proceso está en ejecución, suspendido, bloqueado o finalizado.
+- *Contador de Programa*, encargado en mantener la dirección en memoria, de la próxima instrucción que debe ejecutar el proceso.
+- *Información de Memoria*, la cual contiene información sobre la memoria que utiliza el proceso, incluyendo su tamaño, dirección y permisos de acceso.
+- *Información de Recursos*, incluye información sobre los recursos que el proceso está utilizando, como archivos abiertos, dispositivos de entrada/salida, entre otros.
+- *Información de Planificación*, la cual contiene información sobre la prioridad del proceso, su estado de espera y otros detalles relevantes para la planificación del sistema.
 - Información del Propietario, que mantiene información sobre el usuario o grupo que creó el proceso y sus permisos de acceso.
 
 
