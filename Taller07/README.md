@@ -1,8 +1,6 @@
 # Taller 07
 ## *Wilmer Steven Farfán Castillo - 2194285*
 
-Para esta práctica realice una investigación sobre comandos usados en linux y resuelva los siguientes casos de uso:
-
 El repositorio se compone de 9 scripts, referentes a la solución de cada uno de los casos de uso propuestos. Además contiene un archivo en txt referente a las salidas de todos los script. Finalmente existe un archivo adicional llamado run.sh, que se encarga de realizar la ejecución de todos los scripts, salvo en algunos casos.
 
 1. **Escriba un script que liste los comandos ejecutados en la terminal, los ordene, los cuente:** 
