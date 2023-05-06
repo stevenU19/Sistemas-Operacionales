@@ -1,0 +1,14 @@
+./imagen.jpg
+./script2.txt
+./script1.txt
+./script4.txt
+./script5.txt
+./imagen2.png
+./script6.txt
+./imagen.jpg
+./script2.txt
+./script1.txt
+./script4.txt
+./script5.txt
+./imagen2.png
+./script6.txt

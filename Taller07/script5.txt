@@ -1,0 +1,8 @@
+Nombre del PRIMER archivo: script1.txt
+Nombre del SEGUNDO archivo: script4.sh
+- Tipo de archivo de [script1.txt]: ASCII text
+- Tipo de archivo de [script4.sh]: Bourne-Again shell script, ASCII text executable
+* El tamaño en bytes para [script1.txt] es: 1695
+* El tamaño en bytes para [script4.sh] es: 206
+- Cantidad de lineas: 140 script1.txt
+- cantidad de lineas: 5 script4.sh

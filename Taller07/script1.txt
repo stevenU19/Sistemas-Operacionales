@@ -1,0 +1,140 @@
+--- Total de comandos ejecutados: 139
+cd
+ls
+neofetch
+pwd
+man ls
+man pwd
+ls /
+ls -l /
+ping spotify.com
+shutdown now
+ping google.com
+ip a
+netstat -p
+netstat -n
+clear
+ping google.com
+shutdown now
+cd
+ls
+ls -la
+ls -ls
+touch prt01.txt
+touch prt02.txt
+touch prt03.docx
+ls -ls
+cd
+ls
+close
+cd /home/
+ls -ls
+ls -la
+touch prt01.txt
+touch prt02.txt
+touch prt03.docx
+ls -la
+help -h
+less -help
+less -h
+less --help
+man less
+clear
+mkdir carpeta
+ls -ls
+ls -la carpeta/
+man mkdir
+rmdir carpeta
+ls
+ls -ls
+pwd
+touch archivo
+ls
+rm archivo
+ls
+tar cvf comprimido.tar prt01.txt prt02.txt
+ls
+locate prt01.txt
+ls -ls
+df -h
+sudo su
+shutdown now
+cd
+ls
+ipconfig
+ls -la
+ls -ls
+cd /home
+ls
+ls -ls
+ls -la
+shutdown noe
+shutdown now
+ls
+ls -ls
+cd home
+cd /home
+ls
+ls -ls
+cd
+mkdir TALLER02
+cd /home/TALLER02
+mv TALLER02
+rm TALLER02
+cd /home/
+mkdir TALLER02
+cd /home/TALLER02
+vim bash1.sh
+vim bash2.sh
+vim bash3.sh
+vim bash4.sh
+bash bash4.sh
+zip -r Taller02.zip TALLER02/
+cd /home
+zip -r Taller02.zip TALLER02/
+cd /home/TALLER02
+bash bash4.sh
+shutdown now
+cd taller07
+bash script5.sh
+nano script5.sh
+bash script5.sh
+bash script5.sh script1.txt
+nano script5.sh
+bash script5.sh script1.txt script6.sh
+clear
+bash script5.sh script1.txt script6.sh
+bash script5.sh script1.sh script6.sh
+clear
+touch script3.sh
+zip -r 2194285-Taller07.zip /
+clear
+zip archivos.zip *
+source ~/.script3.sh
+source ~/.script3
+nano ~/.script3
+source ~/.script3
+zipp
+bash script3.sh
+hist
+clear
+hist
+bash script3.sh
+clear
+bash script3.sh
+source ~/.script3.sh
+zipp0
+zipp1
+alias hist0='cat ~/.bash_history'
+hist0
+clear
+batch scriptRun.sh
+bash scriptRun.sh
+touch prueba.pdf
+touch imagen.jpg
+clear
+touch script7.sh
+bash script7.sh
+nano script7.sh
+clear
+shutdown now
