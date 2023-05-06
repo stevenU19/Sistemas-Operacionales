@@ -1,7 +1,7 @@
 # Taller 07
 ## *Wilmer Steven Farfán Castillo - 2194285*
 
-El repositorio se compone de 9 scripts, referentes a la solución de cada uno de los casos de uso propuestos. Además contiene un archivo en txt referente a las salidas de todos los script. Finalmente existe un archivo adicional llamado run.sh, que se encarga de realizar la ejecución de todos los scripts, salvo en algunos casos.
+El repositorio se compone de 9 scripts, referentes a la solución de cada uno de los casos de uso propuestos. Además contiene un archivo en txt referente a las salidas de todos los script. Finalmente existe un archivo adicional llamado run.sh, que se encarga de realizar la ejecución de todos los scripts, salvo en algunos casos. Para facilitar la visualización de los archivos, en la carpeta scripts se encuentra una copia de cada uno de los ejecutables solicitados.
 
 1. **Escriba un script que liste los comandos ejecutados en la terminal, los ordene, los cuente:** 
 Salida del archivo, **script1.txt**
