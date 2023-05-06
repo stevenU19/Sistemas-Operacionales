@@ -20,7 +20,7 @@ Salida del archivo, **script4.txt**
 Salida del archivo, **script5.txt**
 
 6. **Escriba un script que busque todos los archivos .txt, .png y .jpg que estén en el OS:** 
-Salida del archivo, **script6.txt**
+Se adjunta unos archivos adicionales con la extensión pdf y jpg, para probar la búsqueda. Salida del archivo, **script6.txt**
 
 7. **Escriba un script que genere una archivo .log. Cada que el script se ejecute debe registrar en una linea la fecha, hora, minutos, segundos, el hostname, la carga del sistema y la memoria libre.**
 
