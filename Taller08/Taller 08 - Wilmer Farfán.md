@@ -53,7 +53,7 @@ El tiempo de espera de cada proceso varía según el algoritmo de planificación
 - **En un algoritmo de planificación Round Robin (RR):** El tiempo de espera de cada proceso depende del tiempo de cuantum establecido por el planificador y de la cantidad de procesos que se están ejecutando. Si el cuantum es demasiado pequeño, los procesos que requieren mucho tiempo de CPU pueden tardar en completarse y aumentar el tiempo de espera de otros procesos.
 
 
-## 8. ¿Qué algoritmo puede dar lugar a bloqueos indefinidos?: 
+## 8. ¿Qué algoritmo puede dar lugar a bloqueos indefinidos?: BLOQUEO POR INANICIÓN, QUE CAIGA POR INANICIÓN
 
 El algoritmo que puede dar lugar a bloqueos indefinidos es el algoritmo de asignación de recursos basado en el protocolo de exclusión mutua, conocido como "Deadlock". Un bloqueo indefinido o "Deadlock" se produce cuando un conjunto de procesos están bloqueados entre sí esperando la liberación de los recursos que necesita cada proceso para continuar su ejecución, pero ninguno de ellos puede liberar los recursos que ya ha obtenido. En el algoritmo de planificación de recursos Deadlock, cada proceso solicita una serie de recursos para llevar a cabo su tarea, y los recursos se asignan a los procesos según su disponibilidad. 
 
