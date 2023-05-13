@@ -31,6 +31,10 @@ Cuando un proceso necesita acceder a un dispositivo de entrada/salida, como un d
 Por otro lado, si la CPU está demasiado ocupada procesando otros procesos y no está disponible para procesar las solicitudes de entrada/salida, se puede producir un cuello de botella en el rendimiento del sistema. Los procesos que requieren acceso a dispositivos de entrada/salida pueden quedarse en la cola de procesos pendientes y experimentar un retraso significativo en la finalización de su trabajo. Para evitar este conflicto, los planificadores deben encontrar un equilibrio adecuado entre la utilización de los dispositivos de entrada/salida y la utilización de la CPU. Por ejemplo, se puede utilizar un planificador de E/S para optimizar el uso de los dispositivos de E/S y reducir el tiempo de espera de los procesos que los utilizan. Además, el planificador puede priorizar los procesos que requieren acceso a los dispositivos de entrada/salida y garantizar que la CPU esté disponible para procesar las solicitudes de E/S.
 
 
+## 5. Considere el siguiente conjunto de procesos, todos llegan al mismo tiempo en el orden del subíndice:
+![Prioridades](https://github.com/stevenU19/Sistemas-Operacionales/blob/139eb532ce69986c90bbcf291457608d0624f6e1/Taller08/Prioridades.png)
+
+
 ## 6. ¿Cuál es el tiempo de ejecución de cada proceso para cada algoritmo?:
 
 El tiempo de ejecución de cada proceso varía según el algoritmo de planificación utilizado y las características específicas de cada proceso y del sistema.
