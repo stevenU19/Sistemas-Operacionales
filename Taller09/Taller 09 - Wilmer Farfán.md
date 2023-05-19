@@ -80,7 +80,7 @@ Por otro lado, los semáforos son una primitiva de sincronización más básica 
 Aunque los monitores y los semáforos tienen diferencias en su estructura y forma de uso, pueden emplearse para implementar los mismos tipos de problemas de sincronización, como el problema del productor y consumidor, el problema de los lectores y escritores y el problema de los filósofos comensales, entre otros. Ambos mecanismos proporcionan las primitivas necesarias para coordinar y sincronizar el acceso a los recursos compartidos, evitando condiciones de carrera y garantizando una ejecución ordenada y consistente de los hilos o procesos concurrentes.
 
 
-## 8. La exclusión mutua estricta en un monitor hace que el monitor de búfer limitado sea adecuadopara porciones pequeñas. Explique por qué es cierto esto:
+## 8. La exclusión mutua estricta en un monitor hace que el monitor de búfer limitado sea adecuado para porciones pequeñas. Explique porqué es cierto esto:
 
 La exclusión mutua estricta en un monitor implica que solo un hilo puede ejecutar una porción de código dentro del monitor a la vez. Esto se logra mediante el uso de un bloqueo interno que adquiere y libera automáticamente el monitor para garantizar que solo un hilo pueda acceder a los datos compartidos en un momento dado.
 
@@ -89,7 +89,7 @@ Cuando se trata de un monitor de búfer limitado, que es una estructura de datos
 Esto puede tener un impacto negativo en el rendimiento cuando se trata de porciones pequeñas de código dentro del monitor. Si, por ejemplo, el acceso al búfer se limita a una sola operación de escritura o lectura, los hilos pueden pasar más tiempo esperando para adquirir el bloqueo del monitor que realizando la operación real en el búfer. Esto puede generar un cuello de botella y disminuir la eficiencia y el rendimiento general del programa. En consecuencia, cuando se utiliza un monitor de búfer limitado, es importante considerar cuidadosamente el alcance y la granularidad de la exclusión mutua. Si la exclusión mutua estricta no es necesaria para todas las operaciones dentro del monitor, es posible ajustar el diseño y la implementación para permitir que varias operaciones pequeñas se realicen de manera concurrente sin bloquear a otros hilos.
 
 
-## 9. ¿Por qué Windows y Linux utilizan bloqueos mediante bucle sin fin como mecanismo de sincronización solo en los sistemas multiprocesador y no en los sistemas monoprocesador?
+## 9. ¿Por qué Windows y Linux utilizan bloqueos mediante bucle sin fin como mecanismo de sincronización sólo en los sistemas multiprocesador y no en los sistemas monoprocesador?
 
 Tanto Windows como Linux utilizan bloqueos mediante bucle sin fin, (también conocidos como "spin locks" o "busy-wait locks"), como mecanismo de sincronización en sistemas multiprocesador y no en sistemas monoprocesador debido a las diferencias fundamentales en la arquitectura y el funcionamiento de estos sistemas.
 
