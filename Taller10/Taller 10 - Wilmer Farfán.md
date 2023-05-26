@@ -87,5 +87,11 @@ Así se evita el interbloqueo, garantizando que un filósofo solo pueda comer cu
 
 ## 9. ¿Cuál es la suposición optimista realizada en el algoritmo de detección de interbloqueos y cómo podría violarse esta suposición?
 
+El algoritmo de detección de interbloqueos, conocido como el algoritmo del banquero, se basa en la suposición optimista de que no ocurrirán solicitudes adicionales de recursos después de la asignación inicial. El algoritmo asume que, una vez que se asignan los recursos iniciales a los procesos, no se realizarán más solicitudes de recursos. Esto implica que el sistema no experimentará ninguna variación en las necesidades de recursos de los procesos en el futuro. Sin embargo, esta suposición puede ser violada en varias situaciones:
 
+- **Nuevas Solicitudes de Recursos:** Si los procesos pueden realizar solicitudes adicionales de recursos después de la asignación inicial, la suposición optimista se viola. Por ejemplo, si un proceso asignado inicialmente con un número limitado de recursos solicita más recursos, el algoritmo de detección de interbloqueos podría no ser capaz de manejar esta situación.
+
+- **Liberación Incorrecta de Recursos:** Si un proceso libera incorrectamente los recursos asignados antes de su finalización, puede dar lugar a nuevas solicitudes de recursos. Estas solicitudes adicionales pueden violar la suposición de no solicitud futura y afectar la capacidad del algoritmo para detectar y resolver interbloqueos.
+
+- **Recursos Compartidos:** Si los recursos asignados inicialmente son compartidos entre diferentes procesos, existe la posibilidad de que otros procesos soliciten esos recursos compartidos después de la asignación inicial. Si esto ocurre, la suposición de no solicitud adicional se viola y puede dificultar la detección y resolución de interbloqueos.
 
