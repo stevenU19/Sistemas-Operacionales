@@ -77,9 +77,9 @@ En todas las posibles asignaciones de recursos, al menos un proceso puede obtene
 Para determinar si una solicitud de palillos podría ser satisfecha sin dar lugar a interbloqueos en el problema de los filósofos, se puede aplicar el siguiente algoritmo:
 1. **Cada filósofo debe tener acceso a dos palillos para poder comer.**
 2. **Cuando un filósofo realiza una solicitud de palillos:**
-- Si ambos palillos solicitados están disponibles, entonces la solicitud se puede satisfacer de inmediato.
-- Si solo uno de los palillos solicitados está disponible, el filósofo debe esperar hasta que el otro palillo esté disponible.
-- Si ninguno de los palillos solicitados está disponible, el filósofo debe esperar hasta que ambos palillos estén disponibles.
+- *Si ambos palillos solicitados están disponibles, entonces la solicitud se puede satisfacer de inmediato.*
+- *Si solo uno de los palillos solicitados está disponible, el filósofo debe esperar hasta que el otro palillo esté disponible.*
+- *Si ninguno de los palillos solicitados está disponible, el filósofo debe esperar hasta que ambos palillos estén disponibles.*
 3. **Si un filósofo está esperando que ambos palillos estén disponibles y uno de los palillos solicitados es liberado por otro filósofo, pero el segundo palillo no está disponible, el filósofo debe liberar el palillo que tiene y volver al estado de espera inicial.**
 
 Así se evita el interbloqueo, garantizando que un filósofo solo pueda comer cuando tiene acceso a ambos palillos.
