@@ -8,7 +8,7 @@
 **Fragmentación externa:** Se refiere a la situación en la que hay suficiente memoria total disponible en el sistema o en una base de datos, pero no está contigua. Esto significa que hay suficiente memoria libre en pequeños bloques dispersos, pero no se puede asignar de manera contigua para satisfacer las necesidades de un proceso o una estructura de datos. La fragmentación externa puede ocurrir cuando se asignan y liberan bloques de memoria o cuando se realizan inserciones y eliminaciones en una base de datos. Con el tiempo, los bloques de memoria o las áreas de almacenamiento se dividen en fragmentos más pequeños y no contiguos, lo que dificulta la asignación de bloques de memoria grandes o la colocación de estructuras de datos más grandes.
 
 
-## 2. **¿En que forma el editor de montaje cambia el acoplamiento de las instrucciones y los datos a direcciones de memoria?:**
+## 2. **¿En qué forma el editor de montaje cambia el acoplamiento de las instrucciones y los datos a direcciones de memoria?:**
 
 El editor de montaje es una herramienta utilizada para traducir el código fuente en lenguaje ensamblador a código máquina, el cual se ejecuta directamente por el procesador. Durante este proceso, el editor de montaje puede cambiar la forma en que las instrucciones y los datos se acoplan a direcciones de memoria. Aquí hay algunas formas en las que esto puede ocurrir:
 
