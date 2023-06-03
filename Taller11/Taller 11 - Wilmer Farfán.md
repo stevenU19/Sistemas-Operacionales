@@ -100,7 +100,7 @@ Para facilitar el acoplamiento de memoria de manera eficiente y precisa, garanti
 
 **¿Por qué?:** En un OS con paginación, un proceso no puede acceder a una zona de memoria que no sea de su propiedad debido a la protección de memoria implementada por el sistema. Cada proceso tiene su propio espacio de direcciones virtuales, que se divide en páginas. Cada página está asociada con permisos de acceso, como lectura, escritura y ejecución. Estos permisos son controlados por el sistema operativo y se establecen durante la creación y asignación de páginas al proceso.
 
-**Cómo podía el OS permitir el acceso a otras zonas de memoria?** El sistema operativo puede permitir el acceso a otras zonas de memoria, *compartiendo memoria,* la cual incluye la asignación explícita de páginas compartidas que se pueden acceder y modificar por múltiples procesos. El acceso a estas zonas de memoria compartida se realiza a través de mecanismos de sincronización y comunicación entre procesos, como semáforos o mutex.
+**Cómo podía el OS permitir el acceso a otras zonas de memoria?:** El sistema operativo puede permitir el acceso a otras zonas de memoria, *compartiendo memoria,* la cual incluye la asignación explícita de páginas compartidas que se pueden acceder y modificar por múltiples procesos. El acceso a estas zonas de memoria compartida se realiza a través de mecanismos de sincronización y comunicación entre procesos, como semáforos o mutex.
 Además por el paso de mensajes entre procesos, que pueden comunicarse enviando mensajes que contienen datos específicos, en lugar de acceder directamente a la memoria de otros procesos. Esto garantiza un mayor nivel de control y seguridad en el acceso a la memoria de otros procesos.
 
 **¿Por qué debería o por qué no debería?:** La decisión de permitir o no el acceso a otras zonas de memoria depende de varios factores como lo son la seguridad y la privacidad, en la cual se debe tener en cuenta el mantener la integridad y la confidencialidad de los datos, además de evitar la exposición de información sensible.
@@ -115,8 +115,8 @@ Además por el paso de mensajes entre procesos, que pueden comunicarse enviando 
 ## 9. Considere la siguiente tabla de segmento, ¿cuáles son las direcciones físicas para las siguientes direcciones lógicas?: 
 ![tabla](https://github.com/stevenU19/Sistemas-Operacionales/blob/d734f44bd9374f0c9073c73536f104b6a6ed9571/Taller11/tabla.png)
 
-**1. 0. 430:** La dirección física sería: **(0, 649)** lo cual se encuentra dentro del rango del segmento 0.
-**2. 1. 10:** La dirección física sería:  **(1, 2310)** lo cual se encuentra dentro del rango del segmento 1.
-**3. 2. 500:** Por la longitud del segmento 2, de sólo 100, no se podría almacenar. No existe dirección lógica.
-**4. 3. 400:** La dirección física sería: **(3, 1727)** lo cual se encuentra dentro del rango del segmento 0.
-**5. 4. 112:** Por la longitud del segmento 5, de sólo 96, no se podría almacenar. No existe dirección lógica.
+#### **1. 0. 430:** La dirección física sería: **(0, 649)** lo cual se encuentra dentro del rango del segmento 0.
+#### **2. 1. 10:** La dirección física sería:  **(1, 2310)** lo cual se encuentra dentro del rango del segmento 1.
+#### **3. 2. 500:** Por la longitud del segmento 2, de sólo 100, no se podría almacenar. No existe dirección lógica.
+#### **4. 3. 400:** La dirección física sería: **(3, 1727)** lo cual se encuentra dentro del rango del segmento 0.
+#### **5. 4. 112:** Por la longitud del segmento 5, de sólo 96, no se podría almacenar. No existe dirección lógica.
