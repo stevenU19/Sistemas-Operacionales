@@ -115,8 +115,8 @@ Además por el paso de mensajes entre procesos, que pueden comunicarse enviando 
 ## 9. Considere la siguiente tabla de segmento, ¿cuáles son las direcciones físicas para las siguientes direcciones lógicas?: 
 ![tabla](https://github.com/stevenU19/Sistemas-Operacionales/blob/d734f44bd9374f0c9073c73536f104b6a6ed9571/Taller11/tabla.png)
 
-#### **1. 0. 430:** La dirección física sería: **(0, 649)** lo cual se encuentra dentro del rango del segmento 0.
-#### **2. 1. 10:** La dirección física sería:  **(1, 2310)** lo cual se encuentra dentro del rango del segmento 1.
-#### **3. 2. 500:** Por la longitud del segmento 2, de sólo 100, no se podría almacenar. No existe dirección lógica.
-#### **4. 3. 400:** La dirección física sería: **(3, 1727)** lo cual se encuentra dentro del rango del segmento 0.
-#### **5. 4. 112:** Por la longitud del segmento 5, de sólo 96, no se podría almacenar. No existe dirección lógica.
+##### 1. 0. 430: La dirección física sería: **(0, 649)** lo cual se encuentra dentro del rango del segmento 0.
+##### 2. 1. 10: La dirección física sería:  **(1, 2310)** lo cual se encuentra dentro del rango del segmento 1.
+##### 3. 2. 500: Por la longitud del segmento 2, de sólo 100, no se podría almacenar. No existe dirección lógica.
+##### 4. 3. 400: La dirección física sería: **(3, 1727)** lo cual se encuentra dentro del rango del segmento 0.
+##### 5. 4. 112: Por la longitud del segmento 5, de sólo 96, no se podría almacenar. No existe dirección lógica.
