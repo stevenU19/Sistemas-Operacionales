@@ -57,20 +57,20 @@ Para facilitar el acoplamiento de memoria de manera eficiente y precisa, garanti
 
 ## 5. La mayoría de OS permiten a los programas asignar más memoria a su espacio de direcciones durante la ejecución. ¿Qué se necesitaría para soportar la asignación dinámica de memoria en los siguientes esquemas?: Asignación Contigua de Memoria, Segmentación Pura, Paginación Pura:
 
-**1. Asignación Contigua de Memoria:**
+**Asignación Contigua de Memoria:**
    - Un mecanismo para asignar y liberar bloques de memoria de forma dinámica, como una lista enlazada o un mapa de bits para hacer un seguimiento del espacio de memoria disponible.
    - Un algoritmo para seleccionar el bloque de memoria más adecuado para satisfacer una solicitud de asignación, como el algoritmo de mejor ajuste o el de primer ajuste.
    - Manejo adecuado de la fragmentación, tanto externa como interna, para garantizar la utilización eficiente de la memoria.
    - Un mecanismo para reubicar programas y ajustar las direcciones de memoria cuando sea necesario debido a la asignación dinámica y la liberación de bloques de memoria.
 
-**2. Segmentación Pura:**
+**Segmentación Pura:**
    - Un mecanismo para asignar y liberar segmentos de memoria de forma dinámica.
    - Un sistema de tablas de segmentos que almacene información sobre cada segmento asignado, como su tamaño, dirección base y límites.
    - Un algoritmo para seleccionar el segmento más adecuado para satisfacer una solicitud de asignación, considerando su tamaño y disponibilidad.
    - Un mecanismo para proteger los segmentos asignados de ser accedidos por otros programas de manera no autorizada.
    - Un manejo adecuado de la fragmentación externa y un posible reordenamiento de los segmentos para optimizar el uso de la memoria.
 
-**3. Paginación Pura:**
+**Paginación Pura:**
    - Un mecanismo para asignar y liberar páginas de memoria de forma dinámica.
    - Un sistema de tablas de páginas que mapee las direcciones virtuales a direcciones físicas y almacene información sobre el estado de cada página (asignada o libre).
    - Un algoritmo para seleccionar la página más adecuada para satisfacer una solicitud de asignación, considerando su disponibilidad y ubicación en la memoria física.
@@ -78,21 +78,45 @@ Para facilitar el acoplamiento de memoria de manera eficiente y precisa, garanti
    - Un manejo adecuado de la fragmentación interna de las páginas y un posible ajuste de las tablas de páginas para optimizar el uso de la memoria.
 
 
-## 6. 
+## 6. Compare los esquemas de organización de la memoria principal basados en una asignación continua de memoria, en una segmentación pura y una paginación pura con respecto a: Fragmentación Externa, Fragmentación Interna, Capacidad de Compartir Código:
 
-Comparación de los esquemas de organización de la memoria principal:
+**Fragmentación Externa:**
+   - Asignación continua de memoria: *Este esquema puede sufrir de fragmentación externa, especialmente cuando se asignan y liberan bloques de memoria de manera dinámica. A medida que los bloques de memoria se asignan y liberan, pueden quedar espacios pequeños e intercalados entre ellos, lo que resulta en fragmentación externa. Esto puede llevar a una utilización ineficiente de la memoria y dificultar la asignación de bloques de memoria más grandes.* 
+   - Segmentación pura: *La segmentación pura también puede sufrir de fragmentación externa. A medida que se asignan y liberan segmentos de memoria, pueden quedar espacios vacíos entre ellos, lo que resulta en fragmentación externa.*
+   - Paginación pura: *La paginación pura no sufre de fragmentación externa, debido a que la memoria se divide en páginas de tamaño fijo y se asignan de manera independiente. No hay espacios vacíos intercalados entre páginas, lo que resulta en una utilización eficiente de la memoria sin fragmentación externa.*
 
-1. Fragmentación externa:
-   - Asignación continua de memoria: Este esquema puede sufrir de fragmentación externa, especialmente cuando se asignan y liberan bloques de memoria de manera dinámica. A medida que los bloques de memoria se asignan y liberan, pueden quedar espacios pequeños e intercalados entre ellos, lo que resulta en fragmentación externa. Esto puede llevar a una utilización ineficiente de la memoria y dificultar la asignación de bloques de memoria más grandes.
-   - Segmentación pura: La segmentación pura también puede sufrir de fragmentación externa. A medida que se asignan y liberan segmentos de memoria, pueden quedar espacios vacíos entre ellos, lo que resulta en fragmentación externa. Sin embargo, se puede mitigar en cierta medida mediante técnicas de compactación y reordenamiento de segmentos.
-   - Paginación pura: La paginación pura no sufre de fragmentación externa, ya que la memoria se divide en páginas de tamaño fijo y se asignan de manera independiente. No hay espacios vacíos intercalados entre páginas, lo que resulta en una utilización eficiente de la memoria sin fragmentación externa.
+**Fragmentación Interna:**
+   - Asignación continua de memoria: *En este esquema, puede haber fragmentación interna. Si se asigna un bloque de memoria más grande que el necesario para un programa, se desperdiciará parte de esa memoria debido a la diferencia entre el tamaño del bloque asignado y el tamaño real del programa. Esto puede conducir a una utilización ineficiente de la memoria.*
+   - Segmentación pura: *La segmentación pura puede sufrir de fragmentación interna. Si un segmento asignado es más grande que el tamaño real del programa, habrá espacio no utilizado dentro del segmento, lo que resulta en fragmentación interna y una utilización menos eficiente de la memoria.*
+   - Paginación pura: *La paginación pura también puede tener fragmentación interna. Las páginas se asignan en unidades fijas, por lo que si el tamaño de un programa no coincide exactamente con el tamaño de una página, se desperdiciará parte de la última página asignada, lo que resulta en fragmentación interna.*
 
-2. Fragmentación interna:
-   - Asignación continua de memoria: En este esquema, puede haber fragmentación interna. Si se asigna un bloque de memoria más grande que el necesario para un programa, se desperdiciará parte de esa memoria debido a la diferencia entre el tamaño del bloque asignado y el tamaño real del programa. Esto puede conducir a una utilización ineficiente de la memoria.
-   - Segmentación pura: La segmentación pura puede sufrir de fragmentación interna. Si un segmento asignado es más grande que el tamaño real del programa, habrá espacio no utilizado dentro del segmento, lo que resulta en fragmentación interna y una utilización menos eficiente de la memoria.
-   - Paginación pura: La paginación pura también puede tener fragmentación interna. Las páginas se asignan en unidades fijas, por lo que si el tamaño de un programa no coincide exactamente con el tamaño de una página, se desperdiciará parte de la última página asignada, lo que resulta en fragmentación interna.
+**Capacidad de Compartir Código:**
+   - Asignación continua de memoria: *En este esquema, puede haber cierta capacidad de compartir código entre programas si se les asigna memoria contigua y comparten secciones de código idénticas o librerías compartidas.*
+   - Segmentación pura: *La segmentación pura puede facilitar el compartir código entre programas, ya que los segmentos pueden asignarse de forma independiente y permitir que diferentes programas accedan al mismo segmento de código compartido.*
+   - Paginación pura: *La paginación pura también permite el compartir código entre programas. Las páginas de código pueden estar presentes en la memoria física y ser compartidas por múltiples programas mediante el uso de tablas de páginas compartidas.*
 
-3. Capacidad de compartir código:
-   - Asignación continua de memoria: En este esquema, puede haber cierta capacidad de compartir código entre programas si se les asigna memoria contigua y comparten secciones de código idénticas o librerías compartidas.
-   - Segmentación pura: La segmentación pura puede facilitar el compartir código entre programas, ya que los segmentos pueden asignarse de forma independiente y permitir que diferentes programas accedan al mismo segmento de código compartido.
-   - Paginación pura: La paginación pura también permite el compartir código entre programas. Las páginas de código pueden estar presentes en la memoria física y ser compartidas por múltiples programas mediante el uso de tablas de páginas compartidas.
+
+## 7. En un OS con paginación, un proceso no puede acceder a una zona de memoria que no sea de su propiedad. ¿Por qué? ¿Cómo podía el OS permitir el acceso a otras zonas de memoria? ¿Por qué debería o por qué no debería?:
+
+**¿Por qué?:** En un OS con paginación, un proceso no puede acceder a una zona de memoria que no sea de su propiedad debido a la protección de memoria implementada por el sistema. Cada proceso tiene su propio espacio de direcciones virtuales, que se divide en páginas. Cada página está asociada con permisos de acceso, como lectura, escritura y ejecución. Estos permisos son controlados por el sistema operativo y se establecen durante la creación y asignación de páginas al proceso.
+
+**Cómo podía el OS permitir el acceso a otras zonas de memoria?** El sistema operativo puede permitir el acceso a otras zonas de memoria, *compartiendo memoria,* la cual incluye la asignación explícita de páginas compartidas que se pueden acceder y modificar por múltiples procesos. El acceso a estas zonas de memoria compartida se realiza a través de mecanismos de sincronización y comunicación entre procesos, como semáforos o mutex.
+Además por el paso de mensajes entre procesos, que pueden comunicarse enviando mensajes que contienen datos específicos, en lugar de acceder directamente a la memoria de otros procesos. Esto garantiza un mayor nivel de control y seguridad en el acceso a la memoria de otros procesos.
+
+**¿Por qué debería o por qué no debería?:** La decisión de permitir o no el acceso a otras zonas de memoria depende de varios factores como lo son la seguridad y la privacidad, en la cual se debe tener en cuenta el mantener la integridad y la confidencialidad de los datos, además de evitar la exposición de información sensible.
+
+
+## 8. Compare el mecanismo de paginación con el de segmentación con respecto a la cantidad de memoria requerida por las estructuras de producción de direcciones para convertir las direcciones virtuales en direcciones físicas:
+
+**Paginación:** Para implementar la paginación, se utiliza una tabla de páginas que mapea las direcciones virtuales a direcciones físicas. La cantidad de memoria requerida para la tabla depende del tamaño de la memoria virtual y el tamaño de las páginas. Sin embargo, esta tabla solo necesita almacenar información sobre las páginas que están realmente en uso por el proceso, permitiendo ahorrar memoria en el proceso.
+
+**Segmentación:** En el caso de la segmentación, se utiliza una tabla de segmentos para mapear las direcciones virtuales a direcciones físicas. La tabla de segmentos contiene información sobre los segmentos de memoria del proceso, como su dirección base, longitud y permisos de acceso. La cantidad de memoria requerida para la tabla depende del número de segmentos en el proceso y de la cantidad de información necesaria para cada segmento. A diferencia de la paginación, la tabla de segmentos generalmente debe almacenar información sobre todos los segmentos posibles, incluso si no están todos en uso. Esto se debe a que los segmentos pueden tener tamaños variables y pueden ser asignados y liberados dinámicamente.
+
+## 9. Considere la siguiente tabla de segmento, ¿cuáles son las direcciones físicas para las siguientes direcciones lógicas?: 
+![tabla](https://github.com/stevenU19/Sistemas-Operacionales/blob/d734f44bd9374f0c9073c73536f104b6a6ed9571/Taller11/tabla.png)
+
+**1. 0. 430:** La dirección física sería: **(0, 649)** lo cual se encuentra dentro del rango del segmento 0.
+**2. 1. 10:** La dirección física sería:  **(1, 2310)** lo cual se encuentra dentro del rango del segmento 1.
+**3. 2. 500:** Por la longitud del segmento 2, de sólo 100, no se podría almacenar. No existe dirección lógica.
+**4. 3. 400:** La dirección física sería: **(3, 1727)** lo cual se encuentra dentro del rango del segmento 0.
+**5. 4. 112:** Por la longitud del segmento 5, de sólo 96, no se podría almacenar. No existe dirección lógica.
