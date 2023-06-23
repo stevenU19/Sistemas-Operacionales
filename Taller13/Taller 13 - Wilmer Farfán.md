@@ -5,7 +5,7 @@
 
 **Stress-ng:**
 
-*Stress-ng* es una herramienta que permite someter a un sistema a distintas pruebas de estrés y carga, especialmente en sistemas Linux. Se utiliza para evaluar el rendimiento, la estabilidad y la capacidad de respuesta de la máquina en condiciones extremas, generando diferentes cargas de trabajo, como estrés en la CPU, en la memoria, en el almacenamiento, en red y en otros subsistemas del sistema. 
+*Stress-ng* es una herramienta que permite someter a un sistema a distintas pruebas de estrés y carga, especialmente en sistemas Linux. Se utiliza para evaluar el rendimiento, la estabilidad y la capacidad de respuesta de la máquina en condiciones extremas, generando diferentes cargas de trabajo, como estrés en la CPU, en la memoria, en el almacenamiento, en red y otros subsistemas del sistema. 
 
 Permite a los administradores y desarrolladores simular condiciones de alta demanda para poder identificar posibles cuellos de botella, problemas de rendimiento, debilidades en la infraestructura y otros aspectos críticos con el fin de garantizar un funcionamiento robusto y eficiente del sistema.
 
