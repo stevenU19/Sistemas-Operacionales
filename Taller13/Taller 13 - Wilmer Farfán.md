@@ -20,27 +20,45 @@ Permite a los administradores y desarrolladores simular condiciones de alta dema
 
 - **EVALUACIÓN DE CPU:**
 
-| Column 1 | Column 2 | Column 3 |
-|----------|----------|----------|
-| Row 1    | Cell 2   | Cell 3   |
-| Row 2    | Cell 5   | Cell 6   |
-| Row 3    | Cell 8   | Cell 9   |
+A continuación se especifica la tabla de la evaluación de la CPU, para 5 ejecuciones distintas durante un periodo de tiempo de 60 segundos. La última fila descrita, corresponde a la media de los datos suministrados.
 
 | bogo ops | real time| usr time | sys time | bogo ops/s |
 |----------|----------|----------|----------|------------|
 |  145067  |   60,01  |  118,64  |   0,01   |  2417,53   |
-|  145204  |    60    |  118,65  |   0,01   |  2419,89   |
-|  145032  |    60    |  118,55  |   0,01   |  2417,12   |
+|  145204  |   60,00  |  118,65  |   0,01   |  2419,89   |
+|  145032  |   60,00  |  118,55  |   0,01   |  2417,12   |
 |  145288  |   60,01  |  118,6   |   0,02   |  2421,23   |
 |  145123  |   60,02  |  118,58  |   0,01   |  2419,65   |
 ||||||
-| 145142,8 |   60,01  |	118,60 | 0,01 | 2419,08
+| 145142,8 |   60,01  | 	118,60 |   0,01   |  2419,08   |
 
-
-
-
-![image](https://github.com/stevenU19/Sistemas-Operacionales/assets/86494104/249767f7-ca68-4198-aa4c-46fb66f58f3c)
+"Bogo ops" es una abreviatura de "Bogus Operations" (operaciones ficticias o falsas)
 
 
 - **EVALUACIÓN DE MEMORIA:**
 
+A continuación se especifica la tabla de la evaluación de la memoria, para 5 ejecuciones distintas durante un periodo de tiempo de 10 segundos. La última fila descrita, corresponde a la media de los datos suministrados.
+
+| bogo ops | real time| usr time | sys time | bogo ops/s |
+|----------|----------|----------|----------|------------|
+| 1316840  |   10,32  |  18,13   |   2,25   | 127594,24  |
+| 1300069  |   10,00  |  17,52   |   2,15   | 129950,16  |
+| 1299890  |   10,00  |  17,32   |   2,36   | 129957,06  |
+| 1300341  |   10,01  |  17,52   |   2,21   | 129960,06  |
+| 1300384  |   10,00  |  17,54   |   2,15   | 129999,86  |
+
+|1303487,82|    10    | 	17,60  |   2,22   | 129488,77  |
+
+- **EVALUACIÓN DE MANEJO DE PROCESOS E HILOS:**
+
+A continuación se especifica la tabla de la evaluación de los procesos e hilos del sistema, para 5 ejecuciones distintas durante un periodo de tiempo de 30 segundos. La última fila descrita, corresponde a la media de los datos suministrados.
+
+| bogo ops | real time| usr time | sys time | bogo ops/s |
+|----------|----------|----------|----------|------------|
+|  304253  |   30,00  |   22,89  |   28,08  |  10146,89  |
+|  308280  |   30,00  |   23,26  |   27,81  |  10275,85  |
+|  317179  |   30,01  |   23,06  |   27,70  |  10572,42  |
+|  321554  |   30,00  |   23,22  |   27,56  |  10315,17  |
+|  309463  |   30,00  |   23,14  |   27,82  |  10284,75  |
+||||||
+| 312082,53|   30,00  | 	23,11  |   2,9    |  10318,08  |
