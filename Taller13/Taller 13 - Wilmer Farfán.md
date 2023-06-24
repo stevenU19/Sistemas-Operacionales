@@ -34,6 +34,10 @@ Permite a los administradores y desarrolladores simular condiciones de alta dema
 | 145288 | 60,01 | 118,6 | 0,02 | 2421,23
 | 145123 | 60,02 | 118,58 | 0,01 | 2419,65
 | 145142,77 | 60,01	118,60 | 0,01 | 2419,08
+
+
+
+
 ![image](https://github.com/stevenU19/Sistemas-Operacionales/assets/86494104/249767f7-ca68-4198-aa4c-46fb66f58f3c)
 
 
